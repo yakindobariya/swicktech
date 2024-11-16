@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Add your splash screen image or logo here
-            Image.asset('lib/app_image/splesh.png', height: 200),
+            Image.asset('lib/app_image/SwicktechLogo.png', height: 200),
           ],
         ),
       ),
