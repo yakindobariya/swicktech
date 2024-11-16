@@ -10,10 +10,8 @@ class Verification extends StatefulWidget {
   State<Verification> createState() => _VerificationState();
 }
 
-
 class _VerificationState extends State<Verification> {
-final String Verificationcode = '1234';
-
+  final String Verificationcode = '1234';
 
   @override
   Widget build(BuildContext context) {
@@ -37,19 +35,14 @@ final String Verificationcode = '1234';
               fieldHeight: 40,
               animation: Animations.grow,
               onComplete: (output) {
-                if (output==Verificationcode)
-                  {
-                  }
-                else
-                  {
-                  }
+                if (output == Verificationcode) {
+                } else {}
               },
               keyboardType: TextInputType.number,
             ),
             const SizedBox(height: 10),
             GestureDetector(
-              onTap: () {
-              },
+              onTap: () {},
               child: Text(
                 "Find your Institute Code",
                 style: GoogleFonts.inter(
@@ -59,25 +52,33 @@ final String Verificationcode = '1234';
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_in(),));
-              },
-                  style: ElevatedButton.styleFrom(minimumSize: const Size(double.infinity, 50),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Sign_in(),
+                        ));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(double.infinity, 50),
                     backgroundColor: const Color(0xff225663),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16)
-                    ),
-
-                  ),child:Text("Verify",style: GoogleFonts.inter(fontWeight: FontWeight.w600,fontSize: 18,color: Colors.white),)),
+                        borderRadius: BorderRadius.circular(16)),
+                  ),
+                  child: Text(
+                    "Verify",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                        color: Colors.white),
+                  )),
             )
-
           ],
         ),
       ),
-
     );
   }
 }
