@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:swicktech/constant/app_size.dart';
 
 class SignInWithPassword extends StatefulWidget {
   const SignInWithPassword({super.key});
@@ -56,9 +57,7 @@ class _SignInWithPasswordState extends State<SignInWithPassword> {
                           horizontal: 30, vertical: 15)),
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              10.h,
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
