@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:swicktech/screen/Sign_in_with_password.dart';
+
+import '../constant/export.dart';
 
 class Sign_in extends StatefulWidget {
   const Sign_in({super.key});
@@ -50,9 +50,7 @@ class _Sign_inState extends State<Sign_in> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: ElevatedButton(
-                    onPressed: () {
-                      print("send otp");
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 50),
                       backgroundColor: const Color(0xff225663),
@@ -109,7 +107,6 @@ class _Sign_inState extends State<Sign_in> {
               ),
               TextButton(
                   onPressed: () {
-                    print("forgot password");
                   },
                   style: const ButtonStyle(),
                   child: Text(

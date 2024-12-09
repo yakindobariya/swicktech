@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:swicktech/screen/verification.dart';
 
+import '../constant/export.dart';
+
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
@@ -64,7 +67,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               onPressed: () =>
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                        builder: (_) => Verification()),
+                                        builder: (_) => const Verification()),
                                   ),
                               child: Text("Skip",
                                   style: GoogleFonts.inter(
@@ -83,7 +86,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               onPressed: () =>
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                        builder: (_) => Verification()),
+                                        builder: (_) => const Verification()),
                                   ),
                               child: Text("Next",
                                   style: GoogleFonts.inter(
@@ -107,7 +110,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Container(
                         height: 56,
                         width: 120,
-                        decoration: BoxDecoration(color: Color(0xffdff9ff),borderRadius: BorderRadius.all(Radius.circular(10))),
+                        decoration: const BoxDecoration(color: Color(0xffdff9ff),borderRadius: BorderRadius.all(Radius.circular(10))),
                         child: TextButton(
                           onPressed: () => _controller.jumpToPage(2),
                           child: Text("Skip",
@@ -121,10 +124,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Container(
                         height: 56,
                         width: 120,
-                        decoration: BoxDecoration(color: Color(0xff225663),borderRadius: BorderRadius.all(Radius.circular(10))),
+                        decoration: const BoxDecoration(color: Color(0xff225663),borderRadius: BorderRadius.all(Radius.circular(10))),
                         child: TextButton(
                           onPressed: () => _controller.nextPage(
-                              duration: Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
                               curve: Curves.ease),
                           child: Text("Next",
                               style: GoogleFonts.inter(
@@ -147,7 +150,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(imagePath, height: 200),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(title,
               style:
                   GoogleFonts.inter(fontWeight: FontWeight.w700, fontSize: 32)),

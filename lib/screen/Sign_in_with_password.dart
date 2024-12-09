@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:swicktech/constant/app_size.dart';
+
+import '../constant/export.dart';
 
 class SignInWithPassword extends StatefulWidget {
   const SignInWithPassword({super.key});
@@ -14,7 +14,7 @@ class _SignInWithPasswordState extends State<SignInWithPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign in with Password"),
+        title: const Text("Sign in with Password"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -22,7 +22,7 @@ class _SignInWithPasswordState extends State<SignInWithPassword> {
           child: Column(
             children: [
               Image.asset("lib/app_image/SwicktechLogo.png"),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
@@ -35,7 +35,7 @@ class _SignInWithPasswordState extends State<SignInWithPassword> {
                 style: GoogleFonts.inter(
                     fontWeight: FontWeight.w500, fontSize: 14),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Padding(
@@ -86,7 +86,7 @@ class _SignInWithPasswordState extends State<SignInWithPassword> {
                       style: GoogleFonts.inter(
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
-                          color: Color(0xff121112),
+                          color: const Color(0xff121112),
                           decoration: TextDecoration.underline),
                     )),
               ),
@@ -95,15 +95,15 @@ class _SignInWithPasswordState extends State<SignInWithPassword> {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    minimumSize: Size.fromHeight(50),
-                    backgroundColor: Color(0xff225663),
+                    minimumSize: const Size.fromHeight(50),
+                    backgroundColor: const Color(0xff225663),
                   ),
                   child: Text(
                     "Sign In",
                     style: GoogleFonts.inter(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
-                        color: Color(0xffFCFCFC)),
+                        color: const Color(0xffFCFCFC)),
                   ),
                 ),
               ),

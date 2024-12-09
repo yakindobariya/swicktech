@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/splesh_screen.dart';
+import 'package:swicktech/screen/verification.dart';
 
 void main()
 {
@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SplashScreen(),
+    return const MaterialApp(
+      home: Verification(),
       debugShowCheckedModeBanner: false,
     );
   }
