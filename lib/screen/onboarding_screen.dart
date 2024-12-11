@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../constant/export.dart';
 
-class OnBoardingScreen extends StatefulWidget {
-  const OnBoardingScreen({super.key});
+class onBoardingScreen extends StatefulWidget {
+  const onBoardingScreen({super.key});
 
   @override
-  _OnBoardingScreenState createState() => _OnBoardingScreenState();
+  _onBoardingScreenState createState() => _onBoardingScreenState();
 }
 
-class _OnBoardingScreenState extends State<OnBoardingScreen> {
+class _onBoardingScreenState extends State<onBoardingScreen> {
   final PageController _controller = PageController();
   bool _isLastPage = false;
 

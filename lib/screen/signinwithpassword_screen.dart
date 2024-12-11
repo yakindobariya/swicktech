@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../constant/export.dart';
 
-class SignInWithPassword extends StatefulWidget {
-  const SignInWithPassword({super.key});
+class signInWithPasswordScreen extends StatefulWidget {
+  const signInWithPasswordScreen({super.key});
 
   @override
-  State<SignInWithPassword> createState() => _SignInWithPasswordState();
+  State<signInWithPasswordScreen> createState() => _signInWithPasswordScreenState();
 }
 
-class _SignInWithPasswordState extends State<SignInWithPassword> {
+class _signInWithPasswordScreenState extends State<signInWithPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

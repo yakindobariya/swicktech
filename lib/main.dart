@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/SignInScreen.dart';
+import 'package:swicktech/screen/signin_Screen.dart';
 
 void main()
 {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SignIn(),
+      home: signInScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

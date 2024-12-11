@@ -4,21 +4,21 @@ import 'package:flutter/material.dart';
 import '../constant/export.dart';
 
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class splashScreen extends StatefulWidget {
+  const splashScreen({super.key});
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _splashScreenState createState() => _splashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _splashScreenState extends State<splashScreen> {
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       // Navigate to the main app screen after 3 seconds
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const OnBoardingScreen()));
+          MaterialPageRoute(builder: (context) => const onBoardingScreen()));
     });
   }
 

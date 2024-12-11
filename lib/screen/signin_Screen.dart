@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../constant/export.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+class signInScreen extends StatefulWidget {
+  const signInScreen({super.key});
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<signInScreen> createState() => _signInScreenState();
 }
 
-class _SignInState extends State<SignIn> {
+class _signInScreenState extends State<signInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,7 +85,7 @@ class _SignInState extends State<SignIn> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignInWithPassword(),
+                            builder: (context) => const signInWithPasswordScreen(),
                           ));
                     },
                     style: ElevatedButton.styleFrom(

@@ -23,7 +23,7 @@ class _VerificationState extends State<Verification> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const SignIn(),
+          builder: (context) => const signInScreen(),
         ),
       );
     } else {
