@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/verification.dart';
+import 'package:swicktech/screen/SignInScreen.dart';
 
 void main()
 {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Verification(),
+      home: SignIn(),
       debugShowCheckedModeBanner: false,
     );
   }

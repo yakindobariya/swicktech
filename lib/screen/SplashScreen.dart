@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 3), () {
       // Navigate to the main app screen after 3 seconds
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const OnboardingScreen()));
+          MaterialPageRoute(builder: (context) => const OnBoardingScreen()));
     });
   }
 
