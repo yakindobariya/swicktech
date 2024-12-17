@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swicktech/screen/home_screen.dart';
 
 import '../constant/export.dart';
 
@@ -93,7 +94,9 @@ class _signInWithPasswordScreenState extends State<signInWithPasswordScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const homeScreen(),));
+                  },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size.fromHeight(50),
                     backgroundColor: const Color(0xff225663),

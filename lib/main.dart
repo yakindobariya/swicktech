@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/signin_Screen.dart';
+import 'package:swicktech/screen/newstudent_Screen.dart';
 
-void main()
-{
+void main()  {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: signInScreen(),
+      home: newStudentScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
-
