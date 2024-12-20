@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class newStudentScreen extends StatefulWidget {
-  const newStudentScreen({super.key});
+import '../constant/export.dart';
+
+class NewStudentScreen extends StatefulWidget {
+  const NewStudentScreen({super.key});
 
   @override
-  State<newStudentScreen> createState() => _newStudentScreenState();
+  State<NewStudentScreen> createState() => _NewStudentScreenState();
 }
 
 String? selectedCourse; // Stores the selected value
@@ -48,7 +49,7 @@ TextEditingController addressController = TextEditingController();
 TextEditingController stateController = TextEditingController();
 TextEditingController cityController = TextEditingController();
 
-class _newStudentScreenState extends State<newStudentScreen> {
+class _NewStudentScreenState extends State<NewStudentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

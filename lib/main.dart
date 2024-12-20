@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/newstudent_Screen.dart';
+import 'package:swicktech/screen/mineScreen/mine_page.dart';
+
+
 
 void main()  {
   runApp(const MyApp());
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: newStudentScreen(),
+      home: MinePage(),
       debugShowCheckedModeBanner: false,
     );
   }

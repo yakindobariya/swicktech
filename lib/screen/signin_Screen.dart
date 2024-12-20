@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../constant/export.dart';
 
-class signInScreen extends StatefulWidget {
-  const signInScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
 
   @override
-  State<signInScreen> createState() => _signInScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _signInScreenState extends State<signInScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class _signInScreenState extends State<signInScreen> {
         child: Center(
           child: Column(
             children: [
-              const Image(image: AssetImage("lib/app_image/SwicktechLogo.png")),
+              const Image(image: AssetImage("lib/assets/app_image/SwicktechLogo.png")),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
@@ -85,7 +85,7 @@ class _signInScreenState extends State<signInScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const signInWithPasswordScreen(),
+                            builder: (context) => const SignInWithPasswordScreen(),
                           ));
                     },
                     style: ElevatedButton.styleFrom(

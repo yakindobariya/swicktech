@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/home_screen.dart';
 
 import '../constant/export.dart';
 
-class signInWithPasswordScreen extends StatefulWidget {
-  const signInWithPasswordScreen({super.key});
+class SignInWithPasswordScreen extends StatefulWidget {
+  const SignInWithPasswordScreen({super.key});
 
   @override
-  State<signInWithPasswordScreen> createState() => _signInWithPasswordScreenState();
+  State<SignInWithPasswordScreen> createState() => _SignInWithPasswordScreenState();
 }
 
-class _signInWithPasswordScreenState extends State<signInWithPasswordScreen> {
+class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +21,7 @@ class _signInWithPasswordScreenState extends State<signInWithPasswordScreen> {
         child: Center(
           child: Column(
             children: [
-              Image.asset("lib/app_image/SwicktechLogo.png"),
+              Image.asset("lib/assets/app_image/SwicktechLogo.png"),
               const SizedBox(
                 height: 10,
               ),
@@ -95,7 +94,7 @@ class _signInWithPasswordScreenState extends State<signInWithPasswordScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const homeScreen(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size.fromHeight(50),

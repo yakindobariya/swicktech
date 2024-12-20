@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../constant/export.dart';
 
-class onBoardingScreen extends StatefulWidget {
-  const onBoardingScreen({super.key});
+class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({super.key});
 
   @override
-  _onBoardingScreenState createState() => _onBoardingScreenState();
+  _OnBoardingScreenState createState() => _OnBoardingScreenState();
 }
 
-class _onBoardingScreenState extends State<onBoardingScreen> {
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final PageController _controller = PageController();
   bool _isLastPage = false;
 
@@ -27,19 +27,19 @@ class _onBoardingScreenState extends State<onBoardingScreen> {
           children: [
             buildOnboardingPage(
               context,
-              "lib/app_image/onboarding1.png",
+              "lib/assets/app_image/onboarding1.png",
               "Security",
               "Highest security at user level, module level, form level & database level.",
             ),
             buildOnboardingPage(
               context,
-              "lib/app_image/onboarding2.png",
+              "lib/assets/app_image/onboarding2.png",
               "User Friendly",
               "Simple and attractive user interface, enriched with modern, intuitive and easy-to-use GUI compontents.",
             ),
             buildOnboardingPage(
               context,
-              "lib/app_image/onboarding3.png",
+              "lib/assets/app_image/onboarding3.png",
               "Compatibility",
               "Similar experience across all devices as it is mobile and tablet friendly",
             ),

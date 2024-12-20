@@ -23,7 +23,7 @@ class _VerificationState extends State<Verification> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const signInScreen(),
+          builder: (context) => const SignInScreen(),
         ),
       );
     } else {
@@ -41,7 +41,7 @@ class _VerificationState extends State<Verification> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("lib/app_image/onboarding4.png"),
+            Image.asset("lib/assets/app_image/onboarding4.png"),
             const SizedBox(height: 10),
             Text(
               "Institute Verification",
