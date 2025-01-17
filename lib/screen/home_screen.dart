@@ -404,6 +404,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
                 children: [
+                  // new student
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -435,12 +436,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // add staff
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const StaffRegistrationScreen(),
                           ));
                     },
                     child: Container(
@@ -466,12 +468,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // student attendance
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const MarkStudentAttendanceScreen(),
                           ));
                     },
                     child: Container(
@@ -497,6 +500,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // send sms
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -528,6 +532,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // upload homework
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -559,6 +564,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // upload notice
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -590,6 +596,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // upload syllabus
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -621,6 +628,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // upload circular
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -652,6 +660,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // upload activity
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -683,6 +692,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // school news
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -714,6 +724,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // upload download
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -745,6 +756,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // document
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -776,6 +788,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // mark manager
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -807,6 +820,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // student photo
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -838,6 +852,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // staff photo
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -869,6 +884,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // leave management
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -900,6 +916,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // ptm
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -931,6 +948,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -953,7 +971,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               image: AssetImage(
                                   "lib/assets/homescreen_image/MasterUpdate.png"),height: 35,width: 35,),
                           Text(
-                            "PTM",
+                            "Master Update",
                             style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w500, fontSize: 12),
                             textAlign: TextAlign.center,

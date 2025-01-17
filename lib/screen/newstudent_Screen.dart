@@ -9,45 +9,19 @@ class NewStudentScreen extends StatefulWidget {
   State<NewStudentScreen> createState() => _NewStudentScreenState();
 }
 
-String? selectedCourse; // Stores the selected value
-final List<String> course = ['android', 'flutter', 'web'];
-
-String? selectedSession;
-final List<String> session = ['morning', 'afternoon'];
-
-String? selectedGender;
-final List<String> gender = ['Male', 'Female'];
-
-String? selectedBloodGroup;
-final List<String> bloodGroup = ['A+', 'A', 'B+', 'B', 'O+', 'O', 'AB+', 'AB'];
-
-String? selectedCountry;
-final List<String> country = [
-  'China',
-  'India',
-  'Indonesia',
-  'Pakistan',
-  'Bangladesh',
-  'Japan',
-  'Philippines',
-  'Vietnam',
-  'Iran',
-  'Turkey',
-];
-
-TextEditingController admissionNumberController = TextEditingController();
-TextEditingController formNumberController = TextEditingController();
+TextEditingController studentAdmissionNumberController = TextEditingController();
+TextEditingController studentFormNumberController = TextEditingController();
 TextEditingController studentNameController = TextEditingController();
-TextEditingController dateOfAdmissionController = TextEditingController();
-TextEditingController dateOfBirthController = TextEditingController();
-TextEditingController smsContectNumberController = TextEditingController();
-TextEditingController aadharNumberController = TextEditingController();
-TextEditingController fatherNameController = TextEditingController();
-TextEditingController fatherContectNumberController = TextEditingController();
-TextEditingController motherNameController = TextEditingController();
-TextEditingController addressController = TextEditingController();
-TextEditingController stateController = TextEditingController();
-TextEditingController cityController = TextEditingController();
+TextEditingController studentDateOfAdmissionController = TextEditingController();
+TextEditingController studentDateOfBirthController = TextEditingController();
+TextEditingController studentSmsContectNumberController = TextEditingController();
+TextEditingController studentAadharNumberController = TextEditingController();
+TextEditingController studentFatherNameController = TextEditingController();
+TextEditingController studentFatherContectNumberController = TextEditingController();
+TextEditingController studentMotherNameController = TextEditingController();
+TextEditingController studentAddressController = TextEditingController();
+TextEditingController studentStateController = TextEditingController();
+TextEditingController studentCityController = TextEditingController();
 
 class _NewStudentScreenState extends State<NewStudentScreen> {
   @override
@@ -60,31 +34,12 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: DropdownButtonFormField(
-                decoration: const InputDecoration(
-                    labelText: "Course",
-                    hintText: "Select Course",
-                    border: OutlineInputBorder()),
-                value: selectedCourse,
-                items: course.map((item) {
-                  return DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(item),
-                  );
-                }).toList(),
-                onChanged: (value) {
-                  setState(() {
-                    selectedCourse = value;
-                  });
-                },
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return "please Select Course";
-                  }
-                  return null;
-                },
+            // course
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CustomDropdownFormField(
+                items: ['android', 'flutter', 'web'],
+                labelText: "Select Course",
               ),
             ),
             Row(
@@ -93,7 +48,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      controller: admissionNumberController,
+                      controller: studentAdmissionNumberController,
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
                         labelText: "Admission No.",
@@ -117,7 +72,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      controller: formNumberController,
+                      controller: studentFormNumberController,
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(
                         labelText: "Form/Sr No.",
@@ -129,33 +84,12 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                 )
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: DropdownButtonFormField(
-                decoration: const InputDecoration(
-                    labelText: "Session",
-                    hintText: "Select a option",
-                    border: OutlineInputBorder()),
-                value: selectedSession,
-                items: session.map((item) {
-                  return DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(item),
-                  );
-                }).toList(),
-                onChanged: (value) {
-                  setState(() {
-                    selectedSession = value;
-                  });
-                },
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return "please Select Course";
-                  }
-                  return null;
-                },
-              ),
-            ),
+            const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: CustomDropdownFormField(
+                  items: ["Morning", "Afternoon"],
+                  labelText: "Select Session",
+                )),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
@@ -173,7 +107,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                     child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    controller: dateOfAdmissionController,
+                    controller: studentDateOfAdmissionController,
                     keyboardType: TextInputType.datetime,
                     decoration: const InputDecoration(
                         labelText: "Date Of Admission",
@@ -185,7 +119,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      controller: dateOfBirthController,
+                      controller: studentDateOfBirthController,
                       keyboardType: TextInputType.datetime,
                       decoration: const InputDecoration(
                           labelText: "Date Of Birth",
@@ -196,72 +130,30 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: DropdownButtonFormField(
-                      decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Gender",
-                          hintText: "Select Option"),
-                      value: selectedGender,
-                      items: gender.map((item) {
-                        return DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(item),
-                        );
-                      }).toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          selectedGender = value;
-                        });
-                      },
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return "please Select Gender";
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
+                      padding: EdgeInsets.all(8.0),
+                      child: CustomDropdownFormField(
+                        items: ["Male", "Female", "Other"],
+                        labelText: "Gender",
+                      )),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: DropdownButtonFormField(
-                      decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Blood Group",
-                          hintText: "Select Option"),
-                      value: selectedBloodGroup,
-                      items: bloodGroup.map((item) {
-                        return DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(item),
-                        );
-                      }).toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          selectedBloodGroup = value;
-                        });
-                      },
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return "please Select Blood Group";
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
+                      padding: EdgeInsets.all(8.0),
+                      child: CustomDropdownFormField(
+                        items: ['A+', 'A', 'B+', 'B', 'O+', 'O', 'AB+', 'AB'],
+                        labelText: "Blood Group",
+                      )),
                 ),
               ],
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: smsContectNumberController,
+                controller: studentSmsContectNumberController,
                 keyboardType: TextInputType.phone,
                 decoration: const InputDecoration(
                     labelText: "SMS Contect No.",
@@ -272,7 +164,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: aadharNumberController,
+                controller: studentAadharNumberController,
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                     labelText: "Aadhar Number",
@@ -283,7 +175,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: fatherNameController,
+                controller: studentFatherNameController,
                 decoration: const InputDecoration(
                     labelText: "Father's Name",
                     hintText: "Enter Father Name",
@@ -293,7 +185,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: fatherContectNumberController,
+                controller: studentFatherContectNumberController,
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                     labelText: "Father's Contect Number",
@@ -304,7 +196,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: motherNameController,
+                controller: studentMotherNameController,
                 decoration: const InputDecoration(
                     labelText: "Mother's Name",
                     hintText: "Enter Mother's Name",
@@ -314,7 +206,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: addressController,
+                controller: studentAddressController,
                 decoration: const InputDecoration(
                     labelText: "Address",
                     hintText: "Enter Address",
@@ -323,38 +215,28 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             ),
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: DropdownButtonFormField(
-                      decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: "Country",
-                          hintText: "Select Option"),
-                      value: selectedCountry,
-                      items: country.map((item) {
-                        return DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(item),
-                        );
-                      }).toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          selectedCountry = value;
-                        });
-                      },
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return "please Select Gender";
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
+                      padding: EdgeInsets.all(8.0),
+                      child: CustomDropdownFormField(
+                        items: [
+                          'China',
+                          'India',
+                          'Indonesia',
+                          'Pakistan',
+                          'Bangladesh',
+                          'Japan',
+                          'Philippines',
+                          'Vietnam',
+                          'Iran',
+                          'Turkey',
+                        ],
+                        labelText: "Country",
+                      )),
                 ),
                 Expanded(
                   child: TextFormField(
-                    controller: stateController,
+                    controller: studentStateController,
                     decoration: const InputDecoration(
                         labelText: 'State',
                         hintText: 'Enter State',
@@ -366,7 +248,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
-                controller: cityController,
+                controller: studentCityController,
                 decoration: const InputDecoration(
                     labelText: 'city',
                     hintText: 'Enter Your City',
@@ -381,13 +263,23 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                   height: 56,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xff225663),
-                    borderRadius: BorderRadius.circular(16)
-                  ),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                      color: const Color(0xff225663),
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.save_outlined,size: 40,color: Colors.white,),
-                      Text("Save",style: GoogleFonts.inter(fontWeight: FontWeight.w600,fontSize: 20,color: Colors.white),)
+                      const Icon(
+                        Icons.save_outlined,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Save",
+                        style: GoogleFonts.inter(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            color: Colors.white),
+                      )
                     ],
                   ),
                 ),

@@ -40,6 +40,8 @@ dependencies:
   animated_splash_screen: ^1.3.0
   flutter_pin_code_fields: ^2.2.0
   carousel_slider: ^5.0.0
+  custom_calender_picker: ^0.1.1
+  intl: ^0.20.1
 
 dev_dependencies:
   flutter_test:
@@ -67,7 +69,6 @@ flutter:
   assets:
      - lib/assets/app_image/
      - lib/assets/homescreen_image/
-     - lib/screen/mineScreen/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

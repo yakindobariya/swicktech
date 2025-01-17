@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/mineScreen/mine_page.dart';
+import 'package:swicktech/screen/splash_screen.dart';
+
+import 'constant/export.dart';
+
 
 
 
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MinePage(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

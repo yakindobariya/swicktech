@@ -1,0 +1,8 @@
+{
+  "storage": {
+    "rules": "swicktech"
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}
