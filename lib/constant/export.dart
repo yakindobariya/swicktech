@@ -16,15 +16,15 @@ export 'package:swicktech/widgets/custom_drop_down.dart';
 // screen package
 
 
-export 'package:swicktech/screen/signin_Screen.dart';
+export 'package:swicktech/screen/signin_screen.dart';
 export 'package:swicktech/screen/signinwithpassword_screen.dart';
 export 'package:swicktech/screen/home_screen.dart';
 export 'package:swicktech/screen/verification_screen.dart';
 export 'package:swicktech/screen/onboarding_screen.dart';
-export 'package:swicktech/screen/newstudent_Screen.dart';
-export 'package:swicktech/screen/switchuser_Screen.dart';
+export 'package:swicktech/screen/newstudent_screen.dart';
+export 'package:swicktech/screen/switchuser_screen.dart';
 export 'package:swicktech/screen/staffregistration_screen.dart';
-export 'package:swicktech/screen/markstudentattendance_Screen.dart';
+export 'package:swicktech/screen/markstudentattendance_screen.dart';
 
 
 
