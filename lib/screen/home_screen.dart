@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swicktech/screen/add_notice_screen.dart';
 
 import '../constant/export.dart';
 
@@ -62,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   "lib/assets/app_image/SwicktechLogo.png")),
                         ),
                         Text(
-                          "Yakin",
+                          "Swicktech",
                           style: GoogleFonts.inter(
                               fontWeight: FontWeight.w600, fontSize: 14),
                         ),
@@ -109,27 +110,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: DropdownButtonFormField(
-                          decoration: const InputDecoration(
-                              border: OutlineInputBorder(), labelText: 'Year'),
-                          value: selectedYear,
-                          items: year.map(
-                            (item) {
-                              return DropdownMenuItem(
-                                value: item,
-                                child: Text(item),
-                              );
-                            },
-                          ).toList(),
-                          onChanged: (value) {
-                            setState(() {
-                              selectedYear = value;
-                            });
-                          }),
-                    ),
+                        padding: EdgeInsets.only(left: 8.0),
+                        child: CustomDropdownFormField(
+                          items: ["2022-23", "2023-24", "2024-25"],
+                          labelText: "Year",
+                        )),
                   )
                 ],
               ),
@@ -424,8 +411,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/NewStudent.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/NewStudent.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "New\nStudent",
                             style: GoogleFonts.inter(
@@ -442,7 +432,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const StaffRegistrationScreen(),
+                            builder: (context) =>
+                                const StaffRegistrationScreen(),
                           ));
                     },
                     child: Container(
@@ -456,8 +447,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/AddStaff.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/AddStaff.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Add\nStaff",
                             style: GoogleFonts.inter(
@@ -474,7 +468,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const MarkStudentAttendanceScreen(),
+                            builder: (context) =>
+                                const MarkStudentAttendanceScreen(),
                           ));
                     },
                     child: Container(
@@ -488,8 +483,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/StudentAttendance.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/StudentAttendance.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Student\nAttendance",
                             style: GoogleFonts.inter(
@@ -506,7 +504,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const SendSmsScreen(),
                           ));
                     },
                     child: Container(
@@ -520,8 +518,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/SendSms.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/SendSms.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Send\nSms",
                             style: GoogleFonts.inter(
@@ -538,7 +539,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const HomeworkScreen(),
                           ));
                     },
                     child: Container(
@@ -552,8 +553,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/UploadHomeWork.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/UploadHomeWork.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Upload\nHomework",
                             style: GoogleFonts.inter(
@@ -570,7 +574,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const AddNoticeScreen(),
                           ));
                     },
                     child: Container(
@@ -584,8 +588,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/UploadNotice.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/UploadNotice.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Upload\nNotice",
                             style: GoogleFonts.inter(
@@ -616,8 +623,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/UploadSyllabus.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/UploadSyllabus.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "upload\nSyllabus",
                             style: GoogleFonts.inter(
@@ -648,8 +658,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/UploadHomeWork.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/UploadHomeWork.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Upload\nCircular",
                             style: GoogleFonts.inter(
@@ -680,8 +693,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/UploadActivity.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/UploadActivity.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Upload\nActivity",
                             style: GoogleFonts.inter(
@@ -712,8 +728,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/SchoolNews.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/SchoolNews.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "School\nNews",
                             style: GoogleFonts.inter(
@@ -744,8 +763,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/UploadDownload.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/UploadDownload.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Upload\nDownloads",
                             style: GoogleFonts.inter(
@@ -776,8 +798,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/Document.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/Document.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Document",
                             style: GoogleFonts.inter(
@@ -808,8 +833,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/MarksManager.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/MarksManager.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Marks\nManager",
                             style: GoogleFonts.inter(
@@ -840,8 +868,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/StudentPhoto.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/StudentPhoto.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Student\nPhoto",
                             style: GoogleFonts.inter(
@@ -872,8 +903,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/StaffPhoto.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/StaffPhoto.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Staff\nPhoto",
                             style: GoogleFonts.inter(
@@ -904,8 +938,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/LeaveManagement.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/LeaveManagement.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Leave\nManagement",
                             style: GoogleFonts.inter(
@@ -936,8 +973,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/PTM.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/PTM.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "PTM",
                             style: GoogleFonts.inter(
@@ -968,8 +1008,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/MasterUpdate.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/MasterUpdate.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Master Update",
                             style: GoogleFonts.inter(
@@ -999,8 +1042,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/Chat.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/Chat.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Chat",
                             style: GoogleFonts.inter(
@@ -1030,8 +1076,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/Visitor.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/Visitor.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Visitor",
                             style: GoogleFonts.inter(
@@ -1061,8 +1110,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/StaffAttendance.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/StaffAttendance.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "PTM",
                             style: GoogleFonts.inter(
@@ -1092,8 +1144,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/TeacherTimetable.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/TeacherTimetable.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Teacher\nTimetable",
                             style: GoogleFonts.inter(
@@ -1104,15 +1159,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Row(mainAxisAlignment: MainAxisAlignment.start,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Important Link",style: GoogleFonts.inter(fontWeight: FontWeight.w600,fontSize: 18),),
+                  Text(
+                    "Important Link",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600, fontSize: 18),
+                  ),
                 ],
               ),
             ),
@@ -1143,8 +1202,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Image(
-                              image: AssetImage(
-                                  "lib/assets/homescreen_image/StudentBirthday.png"),height: 35,width: 35,),
+                            image: AssetImage(
+                                "lib/assets/homescreen_image/StudentBirthday.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Student\nBirthday",
                             style: GoogleFonts.inter(
@@ -1175,7 +1237,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/StaffBirthday.png"),height: 35,width: 35,),
+                                "lib/assets/homescreen_image/StaffBirthday.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Staff\nBirthday",
                             style: GoogleFonts.inter(
@@ -1186,16 +1251,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Row(mainAxisAlignment: MainAxisAlignment.start,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Reports",style: GoogleFonts.inter(fontWeight: FontWeight.w600,fontSize: 18),),
+                  Text(
+                    "Reports",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600, fontSize: 18),
+                  ),
                 ],
               ),
             ),
@@ -1227,7 +1295,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/StudentList.png"),height: 35,width: 35,),
+                                "lib/assets/homescreen_image/StudentList.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Student\nList",
                             style: GoogleFonts.inter(
@@ -1258,7 +1329,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/StaffBirthday.png"),height: 35,width: 35,),
+                                "lib/assets/homescreen_image/StaffBirthday.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Staff\nList",
                             style: GoogleFonts.inter(
@@ -1289,7 +1363,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/AttendanceReports.png"),height: 35,width: 35,),
+                                "lib/assets/homescreen_image/AttendanceReports.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Attendance\nReports",
                             style: GoogleFonts.inter(
@@ -1320,7 +1397,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/FinanceAccount.png"),height: 35,width: 35,),
+                                "lib/assets/homescreen_image/FinanceAccount.png"),
+                            height: 35,
+                            width: 35,
+                          ),
                           Text(
                             "Finance/\nAccount",
                             style: GoogleFonts.inter(
@@ -1331,13 +1411,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
-
                 ],
               ),
             ),
-
-
           ],
         ),
       ),

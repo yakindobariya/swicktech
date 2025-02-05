@@ -66,7 +66,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               onPressed: () =>
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                        builder: (_) => const Verification()),
+                                        builder: (_) =>
+                                            const VerificationScreen()),
                                   ),
                               child: Text("Skip",
                                   style: GoogleFonts.inter(
@@ -85,7 +86,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               onPressed: () =>
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                        builder: (_) => const Verification()),
+                                        builder: (_) =>
+                                            const VerificationScreen()),
                                   ),
                               child: Text("Next",
                                   style: GoogleFonts.inter(
@@ -109,7 +111,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Container(
                         height: 56,
                         width: 120,
-                        decoration: const BoxDecoration(color: Color(0xffdff9ff),borderRadius: BorderRadius.all(Radius.circular(10))),
+                        decoration: const BoxDecoration(
+                            color: Color(0xffdff9ff),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
                         child: TextButton(
                           onPressed: () => _controller.jumpToPage(2),
                           child: Text("Skip",
@@ -123,7 +128,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Container(
                         height: 56,
                         width: 120,
-                        decoration: const BoxDecoration(color: Color(0xff225663),borderRadius: BorderRadius.all(Radius.circular(10))),
+                        decoration: const BoxDecoration(
+                            color: Color(0xff225663),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
                         child: TextButton(
                           onPressed: () => _controller.nextPage(
                               duration: const Duration(milliseconds: 500),

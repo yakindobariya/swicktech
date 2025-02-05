@@ -9,15 +9,19 @@ class NewStudentScreen extends StatefulWidget {
   State<NewStudentScreen> createState() => _NewStudentScreenState();
 }
 
-TextEditingController studentAdmissionNumberController = TextEditingController();
+TextEditingController studentAdmissionNumberController =
+    TextEditingController();
 TextEditingController studentFormNumberController = TextEditingController();
 TextEditingController studentNameController = TextEditingController();
-TextEditingController studentDateOfAdmissionController = TextEditingController();
+TextEditingController studentDateOfAdmissionController =
+    TextEditingController();
 TextEditingController studentDateOfBirthController = TextEditingController();
-TextEditingController studentSmsContectNumberController = TextEditingController();
+TextEditingController studentSmsContectNumberController =
+    TextEditingController();
 TextEditingController studentAadharNumberController = TextEditingController();
 TextEditingController studentFatherNameController = TextEditingController();
-TextEditingController studentFatherContectNumberController = TextEditingController();
+TextEditingController studentFatherContectNumberController =
+    TextEditingController();
 TextEditingController studentMotherNameController = TextEditingController();
 TextEditingController studentAddressController = TextEditingController();
 TextEditingController studentStateController = TextEditingController();
@@ -32,21 +36,20 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            // course
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: CustomDropdownFormField(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Column(
+            children: [
+              // course
+              const CustomDropdownFormField(
                 items: ['android', 'flutter', 'web'],
                 labelText: "Select Course",
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+              10.h,
+              Row(
+                children: [
+                  // admission no.
+                  Expanded(
                     child: TextFormField(
                       controller: studentAdmissionNumberController,
                       keyboardType: TextInputType.number,
@@ -55,22 +58,11 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                         hintText: "Enter Admission No.",
                         border: OutlineInputBorder(),
                       ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return "Please enter a mobile number.";
-                        }
-                        // Regular expression for validating a 10-digit mobile number
-                        if (!RegExp(r'^[0-9]{10}$').hasMatch(value)) {
-                          return "Please enter a valid 10-digit mobile number.";
-                        }
-                        return null;
-                      },
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  // form/sr no
+                  5.w,
+                  Expanded(
                     child: TextFormField(
                       controller: studentFormNumberController,
                       keyboardType: TextInputType.number,
@@ -80,19 +72,18 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                         border: OutlineInputBorder(),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-            const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: CustomDropdownFormField(
-                  items: ["Morning", "Afternoon"],
-                  labelText: "Select Session",
-                )),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+                  )
+                ],
+              ),
+              // select session
+              10.h,
+              const CustomDropdownFormField(
+                items: ["Morning", "Afternoon"],
+                labelText: "Select Session",
+              ),
+              // student name
+              10.h,
+              TextFormField(
                 controller: studentNameController,
                 decoration: const InputDecoration(
                   labelText: "Student Name",
@@ -100,24 +91,21 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                   border: OutlineInputBorder(),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
+              10.h,
+              Row(
+                children: [
+                  // date of admission
+                  Expanded(
+                      child: TextFormField(
                     controller: studentDateOfAdmissionController,
                     keyboardType: TextInputType.datetime,
                     decoration: const InputDecoration(
                         labelText: "Date Of Admission",
                         hintText: "Enter Admission Date",
                         border: OutlineInputBorder()),
-                  ),
-                )),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  )),
+                  5.w,
+                  Expanded(
                     child: TextFormField(
                       controller: studentDateOfBirthController,
                       keyboardType: TextInputType.datetime,
@@ -127,32 +115,31 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                           border: OutlineInputBorder()),
                     ),
                   ),
-                ),
-              ],
-            ),
-            const Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CustomDropdownFormField(
-                        items: ["Male", "Female", "Other"],
-                        labelText: "Gender",
-                      )),
-                ),
-                Expanded(
-                  child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CustomDropdownFormField(
-                        items: ['A+', 'A', 'B+', 'B', 'O+', 'O', 'AB+', 'AB'],
-                        labelText: "Blood Group",
-                      )),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+                ],
+              ),
+              10.h,
+              //Gender
+              Row(
+                children: [
+                  const Expanded(
+                    child: CustomDropdownFormField(
+                      items: ["Male", "Female", "Other"],
+                      labelText: "Gender",
+                    ),
+                  ),
+                  // blood group
+                  5.w,
+                  const Expanded(
+                    child: CustomDropdownFormField(
+                      items: ['A+', 'A', 'B+', 'B', 'O+', 'O', 'AB+', 'AB'],
+                      labelText: "Blood Group",
+                    ),
+                  ),
+                ],
+              ),
+              // sms contect number
+              10.h,
+              TextFormField(
                 controller: studentSmsContectNumberController,
                 keyboardType: TextInputType.phone,
                 decoration: const InputDecoration(
@@ -160,10 +147,9 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                     hintText: "Enter SMS Contect No.",
                     border: OutlineInputBorder()),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+              // aadhar no.
+              10.h,
+              TextFormField(
                 controller: studentAadharNumberController,
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
@@ -171,20 +157,18 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                     hintText: "Enter Aadhar Number.",
                     border: OutlineInputBorder()),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+              // father number
+              10.h,
+              TextFormField(
                 controller: studentFatherNameController,
                 decoration: const InputDecoration(
                     labelText: "Father's Name",
                     hintText: "Enter Father Name",
                     border: OutlineInputBorder()),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+              10.h,
+              // father contect number
+              TextFormField(
                 controller: studentFatherContectNumberController,
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
@@ -192,100 +176,111 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                     hintText: "Enter Father's Contect Number.",
                     border: OutlineInputBorder()),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+              10.h,
+              // mother name
+              TextFormField(
                 controller: studentMotherNameController,
                 decoration: const InputDecoration(
                     labelText: "Mother's Name",
                     hintText: "Enter Mother's Name",
                     border: OutlineInputBorder()),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+              // address
+              10.h,
+              TextFormField(
                 controller: studentAddressController,
                 decoration: const InputDecoration(
                     labelText: "Address",
                     hintText: "Enter Address",
                     border: OutlineInputBorder()),
               ),
-            ),
-            Row(
-              children: [
-                const Expanded(
-                  child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CustomDropdownFormField(
-                        items: [
-                          'China',
-                          'India',
-                          'Indonesia',
-                          'Pakistan',
-                          'Bangladesh',
-                          'Japan',
-                          'Philippines',
-                          'Vietnam',
-                          'Iran',
-                          'Turkey',
-                        ],
-                        labelText: "Country",
-                      )),
-                ),
-                Expanded(
-                  child: TextFormField(
-                    controller: studentStateController,
-                    decoration: const InputDecoration(
-                        labelText: 'State',
-                        hintText: 'Enter State',
-                        border: OutlineInputBorder()),
+              10.h,
+              Row(
+                children: [
+                  const Expanded(
+                    child: CustomDropdownFormField(
+                      items: [
+                        'China',
+                        'India',
+                        'Indonesia',
+                        'Pakistan',
+                        'Bangladesh',
+                        'Japan',
+                        'Philippines',
+                        'Vietnam',
+                        'Iran',
+                        'Turkey',
+                      ],
+                      labelText: "Country",
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
+                  5.w,
+                  Expanded(
+                    child: TextFormField(
+                      controller: studentStateController,
+                      decoration: const InputDecoration(
+                          labelText: 'State',
+                          hintText: 'Enter State',
+                          border: OutlineInputBorder()),
+                    ),
+                  ),
+                ],
+              ),
+              10.h,
+              TextFormField(
                 controller: studentCityController,
                 decoration: const InputDecoration(
-                    labelText: 'city',
+                    labelText: 'City',
                     hintText: 'Enter Your City',
                     border: OutlineInputBorder()),
               ),
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 56,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      color: const Color(0xff225663),
-                      borderRadius: BorderRadius.circular(16)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.save_outlined,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                      Text(
-                        "Save",
-                        style: GoogleFonts.inter(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 20,
-                            color: Colors.white),
-                      )
-                    ],
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return const Scaffold(
+                          body: SingleChildScrollView(
+                            child: Column(
+                              children: [Text("")],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 56,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: const Color(0xff225663),
+                        borderRadius: BorderRadius.circular(16)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.save_outlined,
+                          size: 40,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Save",
+                          style: GoogleFonts.inter(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 20,
+                              color: Colors.white),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

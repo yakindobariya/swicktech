@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:swicktech/constant/export.dart';
 
-class Verification extends StatefulWidget {
-  const Verification({super.key});
+class VerificationScreen extends StatefulWidget {
+  const VerificationScreen({super.key});
 
   @override
-  State<Verification> createState() => _VerificationState();
+  State<VerificationScreen> createState() => _VerificationScreenState();
 }
 
-class _VerificationState extends State<Verification> {
+class _VerificationScreenState extends State<VerificationScreen> {
   final TextEditingController _codeController = TextEditingController();
   final String _verificationCode = "1234";
 

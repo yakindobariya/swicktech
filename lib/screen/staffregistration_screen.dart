@@ -10,6 +10,8 @@ class StaffRegistrationScreen extends StatefulWidget {
       _StaffRegistrationScreenState();
 }
 
+final _formKey = GlobalKey<FormState>();
+
 TextEditingController _staffEmpNoController = TextEditingController();
 TextEditingController _staffJoiningDateController = TextEditingController();
 TextEditingController _staffRetireDateController = TextEditingController();
@@ -32,6 +34,7 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
       appBar: AppBar(
         title: const Text("Staff Registration"),
         centerTitle: true,
+        bottomOpacity: 0,
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -50,18 +53,17 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                         controller: _staffEmpNoController,
-                        decoration: InputDecoration(
-                            labelText: "emp no",
+                        decoration: const InputDecoration(
+                            labelText: "Emp no",
                             hintText: "Emp",
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12))),
+                            border: OutlineInputBorder()),
                       ),
                     ),
                     // shift
                     10.w,
                     const Expanded(
                         child: CustomDropdownFormField(
-                      items: ["mornings", "Afternoon"],
+                      items: ["morning", "Afternoon"],
                       labelText: "Shift",
                     ))
                   ],
@@ -102,7 +104,7 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
                   //  user type
                   const Expanded(
                       child: CustomDropdownFormField(
-                    items: ["items"],
+                    items: ["Teacher", "Developer", "HR"],
                     labelText: "User Type",
                   )),
                   // Nationality
@@ -128,7 +130,7 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
                   // designation
                   const Expanded(
                       child: CustomDropdownFormField(
-                    items: ["items"],
+                    items: ["Manager", "HR", "Sr. Developer", "Developer"],
                     labelText: "Designation",
                   )),
                 ],
@@ -171,10 +173,19 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
 
               //    Contact No.
               20.h,
-              TextField(
+              TextFormField(
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "please enter 10 digit number ";
+                  }
+                  if (!RegExp(r'^\d{10}$').hasMatch(value)) {
+                    return 'Enter a valid 10-digit contact number';
+                  }
+                  return null;
+                },
                 controller: _staffContectNoController,
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: " Contact No."),
+                    border: OutlineInputBorder(), labelText: "Contact No."),
               ),
               //   Aadhar No.
               20.h,
@@ -185,10 +196,10 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
               ),
               // pan no.
               20.h,
-              TextField(
+              TextFormField(
                 controller: _staffPanNoController,
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: "pan No."),
+                    border: OutlineInputBorder(), labelText: "Pan No."),
               ),
               // Address
               20.h,
