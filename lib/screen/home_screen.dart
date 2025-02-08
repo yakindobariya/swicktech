@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/add_notice_screen.dart';
-import 'package:swicktech/screen/add_syllabus_screen.dart';
+import 'package:swicktech/screen/upload_notice_screen.dart';
+import 'package:swicktech/screen/upload_circular_screen.dart';
+import 'package:swicktech/screen/upload_syllabus_screen.dart';
 
 import '../constant/export.dart';
 
@@ -540,7 +541,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeworkScreen(),
+                            builder: (context) => const UploadHomeworkScreen(),
                           ));
                     },
                     child: Container(
@@ -575,7 +576,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AddNoticeScreen(),
+                            builder: (context) => const UploadNoticeScreen(),
                           ));
                     },
                     child: Container(
@@ -610,7 +611,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AddSyllabusScreen(),
+                            builder: (context) => const UploadSyllabusScreen(),
                           ));
                     },
                     child: Container(
@@ -645,7 +646,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const UploadCircularScreen(),
                           ));
                     },
                     child: Container(
@@ -666,41 +667,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Text(
                             "Upload\nCircular",
-                            style: GoogleFonts.inter(
-                                fontWeight: FontWeight.w500, fontSize: 12),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  // upload activity
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
-                          ));
-                    },
-                    child: Container(
-                      height: 75,
-                      width: 75,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Image(
-                            image: AssetImage(
-                                "lib/assets/homescreen_image/UploadActivity.png"),
-                            height: 35,
-                            width: 35,
-                          ),
-                          Text(
-                            "Upload\nActivity",
                             style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w500, fontSize: 12),
                             textAlign: TextAlign.center,

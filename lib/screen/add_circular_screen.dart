@@ -1,83 +1,105 @@
 import 'package:flutter/material.dart';
 import 'package:swicktech/constant/export.dart';
 
-class AddSyllabusScreen extends StatefulWidget {
-  const AddSyllabusScreen({super.key});
+class AddCircularScreen extends StatefulWidget {
+  const AddCircularScreen({super.key});
 
   @override
-  State<AddSyllabusScreen> createState() => _AddSyllabusScreenState();
+  State<AddCircularScreen> createState() => _AddCircularScreenState();
 }
 
-TextEditingController _syllabusDateController = TextEditingController();
-TextEditingController _syllabusReferencebyController = TextEditingController();
-TextEditingController _syllabusTitleController = TextEditingController();
-TextEditingController _syllabusDescriptionController = TextEditingController();
-TextEditingController _syllabusAuthorizedbyController = TextEditingController();
+TextEditingController _circularNoController = TextEditingController();
 
-class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
+class _AddCircularScreenState extends State<AddCircularScreen> {
+  int _selectedNoticeType = 1;
+  final List<String> _noticeTypes = ["Student", "Staff", "Public", "Schedule"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add Syllabus"),
+        title: const Text("Add Circular"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
             children: [
-              // Grade/class
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: const CustomDropdownFormField(
-                  items: ["a", "b", "C"],
-                  labelText: "Grade/Class",
-                ),
-              ),
-              // subject
+              // Notice no
               10.h,
-              const CustomDropdownFormField(
-                items: ["Subject"],
-                labelText: "Subject",
+              TextFormField(
+                controller: _circularNoController,
+                decoration: const InputDecoration(
+                    labelText: "Circular No.", border: OutlineInputBorder()),
               ),
               // date
               10.h,
               TextFormField(
-                controller: _syllabusDateController,
                 decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Date",
-                ),
-                keyboardType: TextInputType.datetime,
+                    labelText: "Date", border: OutlineInputBorder()),
               ),
-              // reference by
+              // notice type
+              10.h,
+              Container(
+                // height: 56,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  border: Border.all(),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Wrap(
+                  spacing: 8, // Space between items horizontally
+                  // runSpacing: 8, // Space between rows
+                  children: List.generate(
+                    _noticeTypes.length,
+                        (index) => Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Radio<int>(
+                          value: index + 1,
+                          groupValue: _selectedNoticeType,
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedNoticeType = value!;
+                            });
+                          },
+                        ),
+                        Text(_noticeTypes[index]),
+                        const SizedBox(width: 8), // Add spacing between items
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              // class/grade
+              10.h,
+              const CustomDropdownFormField(
+                items: ["class"],
+                labelText: "Grade/Class",
+              ),
+              10.h,
+              const CustomDropdownFormField(
+                items: ["items"],
+                labelText: "Student Type (optional)",
+              ),
+              // circular title
               10.h,
               TextFormField(
-                controller: _syllabusReferencebyController,
                 decoration: const InputDecoration(
-                    labelText: " Reference by (optional)",
-                    border: OutlineInputBorder()),
+                  border: OutlineInputBorder(),
+                  labelText: "Circular Title",
+                ),
               ),
-              //    Syllabus Title
-              10.h,
-        TextFormField(
-          controller: _syllabusTitleController,
-          decoration: const InputDecoration(
-              labelText: "  Syllabus Title",
-              border: OutlineInputBorder()
-          ),
-        ),
               // description
               10.h,
-              TextFormField(controller: _syllabusDescriptionController,
-                maxLines: null,
+              TextFormField(maxLines: null,
                 decoration:  const InputDecoration(
                     labelText: "Description", border: OutlineInputBorder()),
               ),
               // authorized by
               10.h,
-              TextFormField(controller: _syllabusAuthorizedbyController,
+              TextFormField(
                 decoration: const InputDecoration(
                     labelText: " Authorize by (optional)",
                     border: OutlineInputBorder()
@@ -172,6 +194,8 @@ class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
                   ),
                 ),
               ),
+              // notify
+
               10.h,
               const CustomSavebutton()
             ],

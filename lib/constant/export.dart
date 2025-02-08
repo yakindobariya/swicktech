@@ -20,7 +20,7 @@ export 'package:swicktech/widgets/custom_savebutton.dart';
 
 export 'package:swicktech/screen/compose_sms_screen.dart';
 export 'package:swicktech/screen/home_screen.dart';
-export 'package:swicktech/screen/homework_screen.dart';
+export 'package:swicktech/screen/upload_homework_screen.dart';
 export 'package:swicktech/screen/markstudentattendance_screen.dart';
 export 'package:swicktech/screen/newstudent_screen.dart';
 export 'package:swicktech/screen/onboarding_screen.dart';
