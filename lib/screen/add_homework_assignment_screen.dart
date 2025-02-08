@@ -19,20 +19,9 @@ class _AddHomeworkAssignmentScreenState
     extends State<AddHomeworkAssignmentScreen> {
   List<Map<String, dynamic>> storeUrl = [];
 
+
+
   @override
-  void _addUrl() {
-    TextFormField(
-      decoration: const InputDecoration(
-          labelText: "URL Link (optional)", border: OutlineInputBorder()),
-    );
-  }
-
-  void _deleteUrl(int index) {
-    setState(() {
-      storeUrl.removeAt(index);
-    });
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -79,6 +68,7 @@ class _AddHomeworkAssignmentScreenState
                     border: OutlineInputBorder(),
                     labelText: "Homework/Assignment Title"),
               ),
+              // description
               10.h,
               TextFormField(
                 controller: _description,
@@ -94,6 +84,7 @@ class _AddHomeworkAssignmentScreenState
                     border: OutlineInputBorder(),
                     labelText: "Max Marks (optional)"),
               ),
+              // Upload attachment
               10.h,
               InkWell(
                 onTap: () {},
@@ -136,7 +127,7 @@ class _AddHomeworkAssignmentScreenState
                 children: [
                   Expanded(
                       child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: "URL Link (optional)"),
                   )),
@@ -164,7 +155,7 @@ class _AddHomeworkAssignmentScreenState
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.add,
                         color: Colors.white,
                         size: 27,
@@ -183,32 +174,7 @@ class _AddHomeworkAssignmentScreenState
 
               // save button
               10.h,
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  width: 343,
-                  height: 56,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: Color(0xff225663)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.save_outlined,
-                        color: Colors.white,
-                        size: 44,
-                      ),
-                      5.w,
-                      Text(
-                        "Save",
-                        style: GoogleFonts.inter(
-                            fontWeight: FontWeight.w600, fontSize: 18,color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const CustomSavebutton(),
               10.h,
             ],
           ),

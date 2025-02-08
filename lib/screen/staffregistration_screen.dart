@@ -10,7 +10,6 @@ class StaffRegistrationScreen extends StatefulWidget {
       _StaffRegistrationScreenState();
 }
 
-final _formKey = GlobalKey<FormState>();
 
 TextEditingController _staffEmpNoController = TextEditingController();
 TextEditingController _staffJoiningDateController = TextEditingController();
@@ -229,37 +228,7 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
                 decoration: const InputDecoration(
                     border: OutlineInputBorder(), labelText: "Bank Name."),
               ),
-
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Container(
-                    width: 343,
-                    height: 56,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: const Color(0xff225663)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.save_outlined,
-                          size: 40,
-                          color: Colors.white,
-                        ),
-                        Text(
-                          "Save",
-                          style: GoogleFonts.inter(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                              color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              )
+              const CustomSavebutton()
             ],
           ),
         ),

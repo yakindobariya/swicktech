@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/add_notice_screen.dart';
 
 import 'constant/export.dart';
 
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: AddNoticeScreen(),
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

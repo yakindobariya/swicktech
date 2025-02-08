@@ -1,96 +1,70 @@
 import 'package:flutter/material.dart';
 import 'package:swicktech/constant/export.dart';
 
-class AddNoticeScreen extends StatefulWidget {
-  const AddNoticeScreen({super.key});
+class AddSyllabusScreen extends StatefulWidget {
+  const AddSyllabusScreen({super.key});
 
   @override
-  State<AddNoticeScreen> createState() => _AddNoticeScreenState();
+  State<AddSyllabusScreen> createState() => _AddSyllabusScreenState();
 }
 
-TextEditingController _noticeNo = TextEditingController();
+TextEditingController _addSyllabusDate = TextEditingController();
+TextEditingController _addSyllabusReferenceby = TextEditingController();
 
-class _AddNoticeScreenState extends State<AddNoticeScreen> {
-  int _selectedNoticeType = 1;
-  final List<String> _noticeTypes = ["Student", "Staff", "Public", "Schedule"];
-
+class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add Notice"),
+        title: const Text("Add Syllabus"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
-              // Notice no
+              // Grade/class
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: const CustomDropdownFormField(
+                  items: ["a", "b", "C"],
+                  labelText: "Grade/Class",
+                ),
+              ),
+              // subject
               10.h,
-              TextFormField(
-                controller: _noticeNo,
-                decoration: const InputDecoration(
-                    labelText: "Notice No.", border: OutlineInputBorder()),
+              const CustomDropdownFormField(
+                items: ["Subject"],
+                labelText: "Subject",
               ),
               // date
               10.h,
               TextFormField(
-                decoration: const InputDecoration(
-                    labelText: "Date", border: OutlineInputBorder()),
-              ),
-              // notice type
-              10.h,
-              Container(
-                // height: 56,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Wrap(
-                  spacing: 8, // Space between items horizontally
-                  // runSpacing: 8, // Space between rows
-                  children: List.generate(
-                    _noticeTypes.length,
-                    (index) => Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Radio<int>(
-                          value: index + 1,
-                          groupValue: _selectedNoticeType,
-                          onChanged: (value) {
-                            setState(() {
-                              _selectedNoticeType = value!;
-                            });
-                          },
-                        ),
-                        Text(_noticeTypes[index]),
-                        const SizedBox(width: 8), // Add spacing between items
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              // class/grade
-              10.h,
-              const CustomDropdownFormField(
-                items: ["class"],
-                labelText: "Grade/Class",
-              ),
-              10.h,
-              const CustomDropdownFormField(
-                items: ["items"],
-                labelText: "Student Type (optional)",
-              ),
-              // notice title
-              10.h,
-              TextFormField(
+                controller: _addSyllabusDate,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: "Notice Title",
+                  labelText: "Date",
                 ),
+                keyboardType: TextInputType.datetime,
               ),
+              // reference by
+              10.h,
+              TextFormField(
+                controller: _addSyllabusReferenceby,
+                decoration: const InputDecoration(
+                    labelText: " Reference by (optional)",
+                    border: OutlineInputBorder()),
+              ),
+              //    Syllabus Title
+              10.h,
+        TextFormField(
+          controller: _addSyllabusReferenceby,
+          decoration: const InputDecoration(
+              labelText: "  Syllabus Title",
+              border: OutlineInputBorder()
+          ),
+        ),
               // description
               10.h,
               TextFormField(maxLines: null,
@@ -101,8 +75,8 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
               10.h,
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: " Authorize by (optional)",
-                  border: OutlineInputBorder()
+                    labelText: " Authorize by (optional)",
+                    border: OutlineInputBorder()
                 ),
               ),
               // upload attachment
@@ -143,7 +117,7 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                   ),
                 ),
               ),
-            //   url link
+              //   url link
               10.h,
               Row(
                 children: [
@@ -162,7 +136,7 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                       ))
                 ],
               ),
-            //   add url link
+              //   add url link
               10.h,
               InkWell(
                 onTap: () {
@@ -194,10 +168,12 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                   ),
                 ),
               ),
-              // notify 
+              // notify
 
               10.h,
-              const CustomSavebutton()
+              const CustomSavebutton(
+
+              )
             ],
           ),
         ),

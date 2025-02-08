@@ -9,6 +9,8 @@ class NewStudentScreen extends StatefulWidget {
   State<NewStudentScreen> createState() => _NewStudentScreenState();
 }
 
+final ValueNotifier<String?> selectedCourse = ValueNotifier(null);
+
 TextEditingController studentAdmissionNumberController =
     TextEditingController();
 TextEditingController studentFormNumberController = TextEditingController();
@@ -37,7 +39,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
               // course
@@ -235,50 +237,23 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                     border: OutlineInputBorder()),
               ),
               GestureDetector(
-                onTap: () {
-                  setState(() {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const Scaffold(
-                          body: SingleChildScrollView(
-                            child: Column(
-                              children: [Text("")],
+                  onTap: () {
+                    setState(() {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return const Scaffold(
+                            body: SingleChildScrollView(
+                              child: Column(
+                                children: [Text("")],
+                              ),
                             ),
-                          ),
-                        );
-                      },
-                    );
-                  });
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 56,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: const Color(0xff225663),
-                        borderRadius: BorderRadius.circular(16)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.save_outlined,
-                          size: 40,
-                          color: Colors.white,
-                        ),
-                        Text(
-                          "Save",
-                          style: GoogleFonts.inter(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                              color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+                          );
+                        },
+                      );
+                    });
+                  },
+                  child: const CustomSavebutton()),
             ],
           ),
         ),

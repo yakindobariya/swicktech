@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swicktech/screen/add_notice_screen.dart';
+import 'package:swicktech/screen/add_syllabus_screen.dart';
 
 import '../constant/export.dart';
 
@@ -609,7 +610,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const AddSyllabusScreen(),
                           ));
                     },
                     child: Container(
