@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:swicktech/screen/Upload_download_screen.dart';
+import 'package:swicktech/screen/school_news_screen.dart';
 import 'package:swicktech/screen/upload_notice_screen.dart';
 import 'package:swicktech/screen/upload_circular_screen.dart';
 import 'package:swicktech/screen/upload_syllabus_screen.dart';
@@ -681,7 +683,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const SchoolNewsScreen(),
                           ));
                     },
                     child: Container(
@@ -716,7 +718,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const UploadDownloadScreen(),
                           ));
                     },
                     child: Container(
