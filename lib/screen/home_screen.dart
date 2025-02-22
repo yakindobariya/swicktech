@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swicktech/screen/Upload_download_screen.dart';
-import 'package:swicktech/screen/school_news_screen.dart';
-import 'package:swicktech/screen/upload_notice_screen.dart';
-import 'package:swicktech/screen/upload_circular_screen.dart';
-import 'package:swicktech/screen/upload_syllabus_screen.dart';
+import 'package:swicktech/screen/document_screen.dart';
+import 'package:swicktech/screen/mark_manager_screen.dart';
+import 'package:swicktech/screen/student_photo_screen.dart';
 
 import '../constant/export.dart';
 
@@ -416,7 +414,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/NewStudent.png"),
+                                "lib/assets/homescreen_image/newStudent.png"),
                             height: 35,
                             width: 35,
                           ),
@@ -558,7 +556,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/UploadHomeWork.png"),
+                                "lib/assets/homescreen_image/uploadHomework.png"),
                             height: 35,
                             width: 35,
                           ),
@@ -593,7 +591,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/UploadNotice.png"),
+                                "lib/assets/homescreen_image/uploadNotice.png"),
                             height: 35,
                             width: 35,
                           ),
@@ -628,7 +626,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/UploadSyllabus.png"),
+                                "lib/assets/homescreen_image/uploadSyllabus.png"),
                             height: 35,
                             width: 35,
                           ),
@@ -663,7 +661,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           const Image(
                             image: AssetImage(
-                                "lib/assets/homescreen_image/UploadHomeWork.png"),
+                                "lib/assets/homescreen_image/UploadCircular.png"),
                             height: 35,
                             width: 35,
                           ),
@@ -753,7 +751,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const DocumentScreen(),
                           ));
                     },
                     child: Container(
@@ -782,13 +780,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  // mark manager
+                  // marks manager
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const MarkManagerScreen(),
                           ));
                     },
                     child: Container(
@@ -823,7 +821,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const NewStudentScreen(),
+                            builder: (context) => const StudentPhotoScreen(),
                           ));
                     },
                     child: Container(

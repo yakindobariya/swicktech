@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:swicktech/constant/export.dart';
 
 class SchoolNewsDetailScreen extends StatelessWidget {
   final String newsDate;
@@ -27,59 +29,145 @@ class SchoolNewsDetailScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("News For"),
-                Text(newsFor.toString()),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("News Date"),
-                Text(newsDate),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("News Upto Date"),
-                Text(newsUptoDate),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("News Title"),
-                Text(newsTitle),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("News Description"),
-                Text(newsDescription),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("Reference By"),
-                Text(newsReferenceBy),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text("Url Link"),
-                Text(newsUrlLink),
-              ],
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // news for
+                  Text(
+                    "News For",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsFor.toString(),
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+              // news date
+              10.h,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "News Date",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsDate,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+              // news upto date
+              10.h,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "News Upto Date",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsUptoDate,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+              //  news title
+              10.h,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "News Title",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsTitle,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+              // news description
+              10.h,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "News Description",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsDescription,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+              //  reference by
+              10.h,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Reference By",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsReferenceBy,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+              //  url link 
+              10.h,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Url Link",
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                        color: Colors.blue),
+                  ),
+                  Text(
+                    newsUrlLink,
+                    style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w400, fontSize: 14),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

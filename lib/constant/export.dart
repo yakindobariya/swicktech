@@ -32,6 +32,11 @@ export 'package:swicktech/screen/staffregistration_screen.dart';
 export 'package:swicktech/screen/studentattendance_screen.dart';
 export 'package:swicktech/screen/switchuser_screen.dart';
 export 'package:swicktech/screen/verification_screen.dart';
+export 'package:swicktech/screen/Upload_download_screen.dart';
+export 'package:swicktech/screen/school_news_screen.dart';
+export 'package:swicktech/screen/upload_notice_screen.dart';
+export 'package:swicktech/screen/upload_circular_screen.dart';
+export 'package:swicktech/screen/upload_syllabus_screen.dart';
 
 
 
