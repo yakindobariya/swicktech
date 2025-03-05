@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:swicktech/screen/remark_entry_screen.dart';
-
 import '../constant/export.dart';
 
 class MarkManagerScreen extends StatefulWidget {
@@ -22,7 +21,6 @@ class _MarkManagerScreenState extends State<MarkManagerScreen> {
         padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 10.0),
         child: Column(mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Marks Manager
             ListTile(
               onTap: () {},
               leading: Container(
@@ -37,7 +35,6 @@ class _MarkManagerScreenState extends State<MarkManagerScreen> {
               title: Text("Marks Manager",style: GoogleFonts.inter(fontWeight: FontWeight.w500,fontSize: 16),),
               trailing: const Icon(Icons.arrow_forward),
             ),
-            // Remark Entry
             10.h,
             ListTile(
               onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const RemarkEntryScreen(),));},
@@ -56,7 +53,6 @@ class _MarkManagerScreenState extends State<MarkManagerScreen> {
           ],
         ),
       ),
-
     );
   }
 }

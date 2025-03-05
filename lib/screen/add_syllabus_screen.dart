@@ -28,9 +28,9 @@ class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
           child: Column(
             children: [
               // Grade/class
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: const CustomDropdownFormField(
+              const Padding(
+                padding: EdgeInsets.only(top: 8.0),
+                child: CustomDropdownFormField(
                   items: ["a", "b", "C"],
                   labelText: "Grade/Class",
                 ),
@@ -61,27 +61,27 @@ class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
               ),
               //    Syllabus Title
               10.h,
-        TextFormField(
-          controller: _syllabusTitleController,
-          decoration: const InputDecoration(
-              labelText: "  Syllabus Title",
-              border: OutlineInputBorder()
-          ),
-        ),
+              TextFormField(
+                controller: _syllabusTitleController,
+                decoration: const InputDecoration(
+                    labelText: "  Syllabus Title",
+                    border: OutlineInputBorder()),
+              ),
               // description
               10.h,
-              TextFormField(controller: _syllabusDescriptionController,
+              TextFormField(
+                controller: _syllabusDescriptionController,
                 maxLines: null,
-                decoration:  const InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Description", border: OutlineInputBorder()),
               ),
               // authorized by
               10.h,
-              TextFormField(controller: _syllabusAuthorizedbyController,
+              TextFormField(
+                controller: _syllabusAuthorizedbyController,
                 decoration: const InputDecoration(
                     labelText: " Authorize by (optional)",
-                    border: OutlineInputBorder()
-                ),
+                    border: OutlineInputBorder()),
               ),
               // upload attachment
               10.h,
@@ -92,7 +92,7 @@ class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border:
-                      Border.all(color: const Color(0xff00B628), width: 1),
+                          Border.all(color: const Color(0xff00B628), width: 1),
                       color: const Color(0xffDFF9FF)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,10 +127,10 @@ class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
                 children: [
                   Expanded(
                       child: TextFormField(
-                        decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: "URL Link (optional)"),
-                      )),
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "URL Link (optional)"),
+                  )),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(

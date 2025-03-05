@@ -20,7 +20,6 @@ class _DocumentScreenState extends State<DocumentScreen> {
         padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 10.0),
         child: Column(mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Student
             ListTile(
               onTap: () {},
               leading: Container(
@@ -35,7 +34,6 @@ class _DocumentScreenState extends State<DocumentScreen> {
               title: Text("Student",style: GoogleFonts.inter(fontWeight: FontWeight.w500,fontSize: 16),),
               trailing: const Icon(Icons.arrow_forward),
             ),
-            // staff
             10.h,
             ListTile(
               onTap: () {},

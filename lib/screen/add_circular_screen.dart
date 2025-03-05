@@ -12,6 +12,7 @@ TextEditingController _circularNoController = TextEditingController();
 
 class _AddCircularScreenState extends State<AddCircularScreen> {
   int _selectedNoticeType = 1;
+
   final List<String> _noticeTypes = ["Student", "Staff", "Public", "Schedule"];
 
   @override

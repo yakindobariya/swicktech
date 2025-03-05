@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
 import 'package:swicktech/screen/add_school_news_screen.dart';
 
 import '../constant/export.dart';

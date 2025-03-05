@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:swicktech/screen/document_screen.dart';
 import 'package:swicktech/screen/mark_manager_screen.dart';
 import 'package:swicktech/screen/student_photo_screen.dart';
-
 import '../constant/export.dart';
 
 class HomeScreen extends StatefulWidget {

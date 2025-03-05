@@ -14,7 +14,7 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Compose SMS"),
+        title: const Text("Compose SMS"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -61,7 +61,6 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
                   ),
                 ),
               ),
-              // student sms
               5.h,
               InkWell(
                 onTap: () => const HomeScreen(),
@@ -131,7 +130,6 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
           ),
         ),
       ),
-
     );
   }
 }
