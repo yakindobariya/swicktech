@@ -8,10 +8,11 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreenState extends State<SplashScreen> {
+  static const KEYLOGIN = "login";
   @override
   void initState() {
     super.initState();
@@ -20,6 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => const OnBoardingScreen()));
     });
+    // whereToGo();
   }
 
   @override
@@ -37,5 +39,33 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
+  // void whereToGo() async{
+  //   var sharespref = await SharedPreferences.getInstance();
+  //   var isLoggedIn = sharespref.getBool(KEYLOGIN);
+  //
+  //
+  //   Timer(const Duration(seconds: 3), () {
+  //     // Navigate to the main app screen after 3 seconds
+  //
+  //     if (isLoggedIn!= null)
+  //     {
+  //       if(isLoggedIn)
+  //       {
+  //         Navigator.of(context).pushReplacement(
+  //             MaterialPageRoute(builder: (context) => const HomeScreen()));
+  //       }
+  //       else
+  //       {
+  //         Navigator.of(context).pushReplacement(
+  //             MaterialPageRoute(builder: (context) => const SignInWithPasswordScreen()));
+  //       }
+  //     }
+  //     Navigator.of(context).pushReplacement(
+  //         MaterialPageRoute(builder: (context) => const SignInWithPasswordScreen()));
+  //
+  //   });
+  // }
 }
+
+
 

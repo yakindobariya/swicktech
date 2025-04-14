@@ -14,6 +14,7 @@ TextEditingController _syllabusTitleController = TextEditingController();
 TextEditingController _syllabusDescriptionController = TextEditingController();
 TextEditingController _syllabusAuthorizedbyController = TextEditingController();
 
+
 class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
   @override
   Widget build(BuildContext context) {
@@ -28,9 +29,9 @@ class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
           child: Column(
             children: [
               // Grade/class
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: const CustomDropdownFormField(
+              const Padding(
+                padding: EdgeInsets.only(top: 8.0),
+                child: CustomDropdownFormField(
                   items: ["a", "b", "C"],
                   labelText: "Grade/Class",
                 ),

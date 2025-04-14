@@ -87,7 +87,8 @@ class DrawerMenu extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
                         image: const DecorationImage(
-                          image: AssetImage("lib/assets/app_image/SwicktechLogo.png"),
+                          image: AssetImage(
+                              "lib/assets/app_image/SwicktechLogo.png"),
                         ),
                       ),
                     ),
@@ -134,24 +135,35 @@ class DrawerMenu extends StatelessWidget {
               ),
               child: item["icon"] != null
                   ? Icon(
-                item["icon"],
-                color: item["iconColor"],
-              )
+                      item["icon"],
+                      color: item["iconColor"],
+                    )
                   : Image.asset(item["image"], height: 24, width: 24),
             ),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               switch (index) {
                 case 1:
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ));
                   break;
 
                 case 2:
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ));
 
                 case 3:
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SwitchUserScreen(),));
-
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SwitchUserScreen(),
+                      ));
               }
             },
           );

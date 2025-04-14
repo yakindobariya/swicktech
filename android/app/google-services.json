@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "807739475473",
+    "project_id": "swicktech-8bba4",
+    "storage_bucket": "swicktech-8bba4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807739475473:android:66f0752821e96ed41dd3b0",
+        "android_client_info": {
+          "package_name": "com.example.swicktech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC11khcb1OWKICFa0oFJNDzshpVr-rPkbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807739475473:android:f15a196ed0715e7d1dd3b0",
+        "android_client_info": {
+          "package_name": "com.example.swicktech1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC11khcb1OWKICFa0oFJNDzshpVr-rPkbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
