@@ -27,34 +27,29 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
             children: [
-              // Notice no
               10.h,
               TextFormField(
                 controller: _circularNoController,
                 decoration: const InputDecoration(
                     labelText: "Circular No.", border: OutlineInputBorder()),
               ),
-              // date
               10.h,
               TextFormField(
                 decoration: const InputDecoration(
                     labelText: "Date", border: OutlineInputBorder()),
               ),
-              // notice type
               10.h,
               Container(
-                // height: 56,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   border: Border.all(),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Wrap(
-                  spacing: 8, // Space between items horizontally
-                  // runSpacing: 8, // Space between rows
+                  spacing: 8,
                   children: List.generate(
                     _noticeTypes.length,
-                        (index) => Row(
+                    (index) => Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Radio<int>(
@@ -67,13 +62,12 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                           },
                         ),
                         Text(_noticeTypes[index]),
-                        const SizedBox(width: 8), // Add spacing between items
+                        const SizedBox(width: 8),
                       ],
                     ),
                   ),
                 ),
               ),
-              // class/grade
               10.h,
               const CustomDropdownFormField(
                 items: ["class"],
@@ -84,7 +78,6 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                 items: ["items"],
                 labelText: "Student Type (optional)",
               ),
-              // circular title
               10.h,
               TextFormField(
                 decoration: const InputDecoration(
@@ -92,21 +85,18 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                   labelText: "Circular Title",
                 ),
               ),
-              // description
               10.h,
-              TextFormField(maxLines: null,
-                decoration:  const InputDecoration(
+              TextFormField(
+                maxLines: null,
+                decoration: const InputDecoration(
                     labelText: "Description", border: OutlineInputBorder()),
               ),
-              // authorized by
               10.h,
               TextFormField(
                 decoration: const InputDecoration(
                     labelText: " Authorize by (optional)",
-                    border: OutlineInputBorder()
-                ),
+                    border: OutlineInputBorder()),
               ),
-              // upload attachment
               10.h,
               InkWell(
                 onTap: () {},
@@ -115,7 +105,7 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border:
-                      Border.all(color: const Color(0xff00B628), width: 1),
+                          Border.all(color: const Color(0xff00B628), width: 1),
                       color: const Color(0xffDFF9FF)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -144,16 +134,15 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                   ),
                 ),
               ),
-              //   url link
               10.h,
               Row(
                 children: [
                   Expanded(
                       child: TextFormField(
-                        decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: "URL Link (optional)"),
-                      )),
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "URL Link (optional)"),
+                  )),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
@@ -163,7 +152,6 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                       ))
                 ],
               ),
-              //   add url link
               10.h,
               InkWell(
                 onTap: () {
@@ -195,8 +183,6 @@ class _AddCircularScreenState extends State<AddCircularScreen> {
                   ),
                 ),
               ),
-              // notify
-
               10.h,
               const CustomSavebutton()
             ],

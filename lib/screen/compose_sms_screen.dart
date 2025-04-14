@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../constant/export.dart';
 
 class ComposeSmsScreen extends StatefulWidget {
@@ -14,7 +13,10 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Compose SMS"),
+        title: const Text(
+          "Compose SMS",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

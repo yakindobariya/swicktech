@@ -9,7 +9,7 @@ class NewStudentScreen extends StatefulWidget {
   State<NewStudentScreen> createState() => _NewStudentScreenState();
 }
 
-final ValueNotifier<String?> selectedCourse = ValueNotifier(null);
+final ValueNotifier<String?> selectedCourNewStudentScreensse = ValueNotifier(null);
 
 TextEditingController studentAdmissionNumberController =
     TextEditingController();
@@ -34,7 +34,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Student Registration"),
+        title: const Text("Student Registration",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -243,7 +243,7 @@ class _NewStudentScreenState extends State<NewStudentScreen> {
                         context: context,
                         builder: (context) {
                           return const Scaffold(
-                            body: SingleChildScrollView(
+                            body: SingleChildScrollView(physics: BouncingScrollPhysics(),
                               child: Column(
                                 children: [Text("")],
                               ),

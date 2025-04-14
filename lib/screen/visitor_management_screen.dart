@@ -10,7 +10,8 @@ class VisitorManagementScreen extends StatelessWidget {
         title: const Text(
           'Visitor Management',
           style: TextStyle(fontWeight: FontWeight.bold),
-        ),centerTitle: true,
+        ),
+        centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -104,5 +105,3 @@ class VisitorManagementScreen extends StatelessWidget {
     );
   }
 }
-
-

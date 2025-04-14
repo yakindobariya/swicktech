@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LeaveApprovelScreen extends StatefulWidget {
+  const LeaveApprovelScreen({super.key});
+
   @override
   _LeaveApprovelScreenState createState() => _LeaveApprovelScreenState();
 }

@@ -33,7 +33,6 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                 decoration: const InputDecoration(
                     labelText: "Notice No.", border: OutlineInputBorder()),
               ),
-              // date
               10.h,
               TextFormField(
                 decoration: const InputDecoration(
@@ -42,15 +41,17 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
               // notice type
               10.h,
               Container(
-                // height: 56,
+                height: 56,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   border: Border.all(),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Wrap(
-                  spacing: 8, // Space between items horizontally
-                  // runSpacing: 8, // Space between rows
+                  spacing: 8,
+                  // Space between items horizontally
+                  runSpacing: 8,
+                  // Space between rows
                   children: List.generate(
                     _noticeTypes.length,
                     (index) => Row(
@@ -66,13 +67,13 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                           },
                         ),
                         Text(_noticeTypes[index]),
-                        const SizedBox(width: 8), // Add spacing between items
+                        const SizedBox(width: 8),
+                        // Add spacing between items
                       ],
                     ),
                   ),
                 ),
               ),
-              // class/grade
               10.h,
               const CustomDropdownFormField(
                 items: ["class"],
@@ -93,17 +94,17 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
               ),
               // description
               10.h,
-              TextFormField(maxLines: null,
-                decoration:  const InputDecoration(
+              TextFormField(
+                maxLines: null,
+                decoration: const InputDecoration(
                     labelText: "Description", border: OutlineInputBorder()),
               ),
               // authorized by
               10.h,
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: " Authorize by (optional)",
-                  border: OutlineInputBorder()
-                ),
+                    labelText: " Authorize by (optional)",
+                    border: OutlineInputBorder()),
               ),
               // upload attachment
               10.h,
@@ -114,7 +115,7 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border:
-                      Border.all(color: const Color(0xff00B628), width: 1),
+                          Border.all(color: const Color(0xff00B628), width: 1),
                       color: const Color(0xffDFF9FF)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -143,16 +144,16 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                   ),
                 ),
               ),
-            //   url link
+              //   url link
               10.h,
               Row(
                 children: [
                   Expanded(
                       child: TextFormField(
-                        decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: "URL Link (optional)"),
-                      )),
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "URL Link (optional)"),
+                  )),
                   IconButton(
                       onPressed: () {},
                       icon: const Icon(
@@ -162,7 +163,7 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                       ))
                 ],
               ),
-            //   add url link
+              //   add url link
               10.h,
               InkWell(
                 onTap: () {
@@ -194,7 +195,7 @@ class _AddNoticeScreenState extends State<AddNoticeScreen> {
                   ),
                 ),
               ),
-              // notify 
+              // notify
 
               10.h,
               const CustomSavebutton()
