@@ -44,6 +44,8 @@ dependencies:
   custom_calender_picker: ^0.1.1
   intl: ^0.20.1
   firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  shared_preferences: ^2.3.3
 
 dev_dependencies:
   flutter_test:

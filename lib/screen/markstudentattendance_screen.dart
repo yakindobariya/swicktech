@@ -49,7 +49,7 @@ class _MarkStudentAttendanceScreenState
             ),
             20.h,
             InkWell(
-              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => StudentAttendanceScreen(),));}, // set
+              onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const StudentAttendanceScreen(),));}, // set
               child: Container(
                 height: 56,
                 width: 343,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:swicktech/constant/export.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -9,21 +10,21 @@ class VerificationScreen extends StatefulWidget {
 }
 
 class _VerificationScreenState extends State<VerificationScreen> {
-  final TextEditingController _codeController = TextEditingController();
+  final TextEditingController codeController = TextEditingController();
   final String _verificationCode = "1234";
 
-  @override
-  void dispose() {
-    _codeController.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   codeController.dispose();
+  //   super.dispose();
+  // }
 
   void _verifyCode() {
-    if (_codeController.text == _verificationCode) {
-      Navigator.push(
+    if (codeController.text == _verificationCode) {
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const SignInScreen(),
+          builder: (context) => const SignInWithPasswordScreen(),
         ),
       );
     } else {
@@ -51,7 +52,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: PinCodeFields(
-                controller: _codeController,
+                controller: codeController,
                 keyboardType: TextInputType.number,
                 length: 4,
                 animation: Animations.slideInLeft,
@@ -100,4 +101,5 @@ class _VerificationScreenState extends State<VerificationScreen> {
     );
   }
 }
+
 

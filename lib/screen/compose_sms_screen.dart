@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../constant/export.dart';
 
 class ComposeSmsScreen extends StatefulWidget {
@@ -13,10 +14,7 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Compose SMS",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
+        title: const Text("Compose SMS"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -63,6 +61,7 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
                   ),
                 ),
               ),
+              // student sms
               5.h,
               InkWell(
                 onTap: () => const HomeScreen(),
@@ -132,6 +131,7 @@ class _ComposeSmsScreenState extends State<ComposeSmsScreen> {
           ),
         ),
       ),
+
     );
   }
 }

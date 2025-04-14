@@ -103,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: const Color(0xff545454cc)),
                       ),
                       Text(
-                        "Last Login is 12 Jan 2024, 9:49 AM",
+                        "Last Login in \n${DateTime.now()}",
                         style: GoogleFonts.mulish(
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
@@ -393,7 +393,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 physics: const BouncingScrollPhysics(),
                 children: [
                   // new student
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       Navigator.push(
                           context,
@@ -954,7 +954,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
+                  // master update
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -989,6 +989,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // chat
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1023,6 +1024,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // visitor
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1057,6 +1059,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // StaffAttendance
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1082,7 +1085,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: 35,
                           ),
                           Text(
-                            "PTM",
+                            "StaffAttendance",
                             style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w500, fontSize: 12),
                             textAlign: TextAlign.center,
@@ -1091,6 +1094,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // TeacherTimetable
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1149,6 +1153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSpacing: 10.0,
                 crossAxisSpacing: 10.0,
                 children: [
+                  // student birthday
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1183,6 +1188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // staff birthday
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1241,6 +1247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSpacing: 10.0,
                 crossAxisSpacing: 10.0,
                 children: [
+                  // student list
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1275,6 +1282,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // staff list
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1309,6 +1317,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // attendance report
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -1343,6 +1352,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  // finance account
                   GestureDetector(
                     onTap: () {
                       Navigator.push(

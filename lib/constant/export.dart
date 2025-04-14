@@ -25,7 +25,6 @@ export 'package:swicktech/screen/markstudentattendance_screen.dart';
 export 'package:swicktech/screen/newstudent_screen.dart';
 export 'package:swicktech/screen/onboarding_screen.dart';
 export 'package:swicktech/screen/send_sms_screen.dart';
-export 'package:swicktech/screen/signin_screen.dart';
 export 'package:swicktech/screen/signinwithpassword_screen.dart';
 export 'package:swicktech/screen/splash_screen.dart';
 export 'package:swicktech/screen/staffregistration_screen.dart';

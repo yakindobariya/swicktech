@@ -15,7 +15,7 @@ class _UploadDownloadScreenState extends State<UploadDownloadScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Download"),
+        title: const Text("Download"),
         centerTitle: true,
       ),
       body: Padding(

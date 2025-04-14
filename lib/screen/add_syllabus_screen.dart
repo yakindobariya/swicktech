@@ -14,6 +14,7 @@ TextEditingController _syllabusTitleController = TextEditingController();
 TextEditingController _syllabusDescriptionController = TextEditingController();
 TextEditingController _syllabusAuthorizedbyController = TextEditingController();
 
+
 class _AddSyllabusScreenState extends State<AddSyllabusScreen> {
   @override
   Widget build(BuildContext context) {
