@@ -10,7 +10,6 @@ class StaffRegistrationScreen extends StatefulWidget {
       _StaffRegistrationScreenState();
 }
 
-
 TextEditingController _staffEmpNoController = TextEditingController();
 TextEditingController _staffJoiningDateController = TextEditingController();
 TextEditingController _staffRetireDateController = TextEditingController();
@@ -31,7 +30,10 @@ class _StaffRegistrationScreenState extends State<StaffRegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Staff Registration"),
+        title: const Text(
+          "Staff Registration",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         bottomOpacity: 0,
       ),

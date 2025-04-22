@@ -41,7 +41,6 @@ class SplashScreenState extends State<SplashScreen> {
   //   var sharespref = await SharedPreferences.getInstance();
   //   var isLoggedIn = sharespref.getBool(KEYLOGIN);
   //
-  //
   //   Timer(const Duration(seconds: 3), () {
   //     // Navigate to the main app screen after 3 seconds
   //
@@ -64,6 +63,3 @@ class SplashScreenState extends State<SplashScreen> {
   //   });
   // }
 }
-
-
-
